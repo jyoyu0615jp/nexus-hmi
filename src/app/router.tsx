@@ -2,13 +2,11 @@ import { createBrowserRouter } from 'react-router'
 
 import AppLayout from '../components/layout/AppLayout'
 import DashboardPage from '../pages/DashboardPage'
-import EmployeesPage from '../pages/EmployeesPage'
 import NotFoundPage from '../pages/NotFoundPage'
+import ProjectsPage from '../pages/ProjectsPage'
 
 export const router = createBrowserRouter([
-  
-  
-   {
+  {
     path: '/',
     element: <AppLayout />,
     errorElement: <NotFoundPage />,
@@ -18,8 +16,8 @@ export const router = createBrowserRouter([
         element: <DashboardPage />,
       },
       {
-        path: 'employees',
-        element: <EmployeesPage />,
+        path: 'projects',
+        element: <ProjectsPage />,
       },
     ],
   },

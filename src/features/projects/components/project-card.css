@@ -1,0 +1,84 @@
+.project-card {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 18px rgb(15 23 42 / 6%);
+}
+
+.project-card__header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.project-card__platform {
+  margin: 0 0 6px;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-card__name {
+  margin: 0;
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.project-card__status {
+  flex-shrink: 0;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: #e2e8f0;
+}
+
+.project-card__details {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.project-card__detail {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.project-card__detail dt {
+  color: #64748b;
+}
+
+.project-card__detail dd {
+  margin: 0;
+  color: #1e293b;
+  font-weight: 600;
+  text-align: right;
+}
+
+.project-card__progress-header {
+  display: flex;
+  justify-content: space-between;
+  color: #475569;
+  font-size: 14px;
+}
+
+.project-card__progress-track {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background-color: #e2e8f0;
+}
+
+.project-card__progress-value {
+  height: 100%;
+  border-radius: inherit;
+  background-color: #2563eb;
+}
