@@ -1,9 +1,13 @@
+import EmployeeList from '../features/employees/components/EmployeeList'
+
 function EmployeesPage() {
   return (
-    <main>
+    <section>
       <h1>Employees</h1>
-      <p>Employee management page.</p>
-    </main>
+      <p>Browse the current employee directory.</p>
+
+      <EmployeeList />
+    </section>
   )
 }
 

@@ -1,17 +1,26 @@
 import { createBrowserRouter } from 'react-router'
 
+import AppLayout from '../components/layout/AppLayout'
 import DashboardPage from '../pages/DashboardPage'
 import EmployeesPage from '../pages/EmployeesPage'
 import NotFoundPage from '../pages/NotFoundPage'
 
 export const router = createBrowserRouter([
-  {
+  
+  
+   {
     path: '/',
-    element: <DashboardPage />,
+    element: <AppLayout />,
     errorElement: <NotFoundPage />,
-  },
-  {
-    path: '/employees',
-    element: <EmployeesPage />,
+    children: [
+      {
+        index: true,
+        element: <DashboardPage />,
+      },
+      {
+        path: 'employees',
+        element: <EmployeesPage />,
+      },
+    ],
   },
 ])
