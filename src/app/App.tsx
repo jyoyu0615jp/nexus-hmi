@@ -1,10 +1,9 @@
+import { RouterProvider } from 'react-router'
+
+import { router } from './router'
+
 function App() {
-  return (
-    <main>
-      <h1>EmployeeHub</h1>
-      <p>Project initialization completed.</p>
-    </main>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App
