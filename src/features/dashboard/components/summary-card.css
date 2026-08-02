@@ -1,0 +1,20 @@
+.summary-card {
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 12px rgb(15 23 42 / 5%);
+}
+
+.summary-card__title {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.summary-card__value {
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: #0f172a;
+  font-size: 32px;
+}

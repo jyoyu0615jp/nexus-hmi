@@ -1,9 +1,16 @@
+import RecentProjects from '../features/dashboard/components/RecentProjects'
+import SummarySection from '../features/dashboard/components/SummarySection'
+
 function DashboardPage() {
   return (
-    <main>
+    <>
       <h1>Dashboard</h1>
-      <p>Welcome to EmployeeHub.</p>
-    </main>
+
+      <SummarySection />
+
+      <RecentProjects />
+    
+    </>
   )
 }
 
