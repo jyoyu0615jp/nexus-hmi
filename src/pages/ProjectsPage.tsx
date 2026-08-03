@@ -35,13 +35,15 @@ function ProjectsPage() {
   }
 
   return (
-    <section>
-      <h1>HMI Projects</h1>
+    <div className="page">
+      <header className="page__header">
+        <h1 className="page__title">HMI Projects</h1>
 
-      <p>
-        Track automotive HMI design projects across different platforms,
-        markets and delivery stages.
-      </p>
+        <p className="page__description">
+          Track automotive HMI design projects across different platforms,
+          markets and delivery stages.
+        </p>
+      </header>
 
       <div>
         <div>
@@ -99,7 +101,7 @@ function ProjectsPage() {
       </div>
 
       <ProjectList projects={filteredProjects} />
-    </section>
+    </div>
   )
 }
 

@@ -52,4 +52,14 @@
   --shadow-md:
     0 6px 18px rgb(15 23 42 / 6%);
 
+    /* ===== Status Colors ===== */
+
+    --status-planning: #f59e0b;
+
+    --status-progress: #2563eb;
+
+    --status-review: #7c3aed;
+
+    --status-completed: #22c55e;
+
 }

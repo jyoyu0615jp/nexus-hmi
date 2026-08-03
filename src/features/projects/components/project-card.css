@@ -6,6 +6,17 @@
   border-radius: var(--radius-lg);
   background-color: var(--color-surface);
   box-shadow: var(--shadow-md);
+
+  transition:
+  transform 180ms ease,
+  box-shadow 180ms ease,
+  border-color 180ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
 }
 
 .project-card__header {
@@ -81,4 +92,32 @@
   height: 100%;
   border-radius: inherit;
   background-color: var(--color-primary);
+
+    transition:
+    width 300ms ease,
+    background-color 300ms ease;
+
+}
+  .project-card__status--planning {
+  color: white;
+  background:
+    var(--status-planning);
+}
+
+.project-card__status--in-progress {
+  color: white;
+  background:
+    var(--status-progress);
+}
+
+.project-card__status--design-review {
+  color: white;
+  background:
+    var(--status-review);
+}
+
+.project-card__status--completed {
+  color: white;
+  background:
+    var(--status-completed);
 }

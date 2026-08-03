@@ -15,7 +15,13 @@ function ProjectCard({ project }: ProjectCardProps) {
           <h2 className="project-card__name">{project.name}</h2>
         </div>
 
-        <span className="project-card__status">{project.status}</span>
+        <span
+          className={`project-card__status project-card__status--${project.status
+            .toLowerCase()
+            .replace(' ', '-')}`}
+        >
+          {project.status}
+        </span>
       </div>
 
       <dl className="project-card__details">
