@@ -1,23 +1,23 @@
 .project-card {
   display: grid;
-  gap: 16px;
-  padding: 20px;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  background-color: #ffffff;
-  box-shadow: 0 6px 18px rgb(15 23 42 / 6%);
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-md);
 }
 
 .project-card__header {
   display: flex;
-  gap: 16px;
+  gap: var(--space-4);
   align-items: flex-start;
   justify-content: space-between;
 }
 
 .project-card__platform {
-  margin: 0 0 6px;
-  color: #2563eb;
+  margin: 0 0 var(--space-2);
+  color: var(--color-primary);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -26,39 +26,39 @@
 
 .project-card__name {
   margin: 0;
-  color: #0f172a;
+  color: var(--color-text-primary);
   font-size: 18px;
 }
 
 .project-card__status {
   flex-shrink: 0;
-  padding: 6px 10px;
+  padding: var(--space-2) var(--space-3);
   border-radius: 999px;
-  color: #334155;
+  color: var(--color-text-primary);
   font-size: 12px;
   font-weight: 700;
-  background-color: #e2e8f0;
+  background-color: var(--color-border);
 }
 
 .project-card__details {
   display: grid;
-  gap: 8px;
+  gap: var(--space-2);
   margin: 0;
 }
 
 .project-card__detail {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: var(--space-4);
 }
 
 .project-card__detail dt {
-  color: #64748b;
+  color: var(--color-text-secondary);
 }
 
 .project-card__detail dd {
   margin: 0;
-  color: #1e293b;
+  color: var(--color-text-primary);
   font-weight: 600;
   text-align: right;
 }
@@ -66,19 +66,19 @@
 .project-card__progress-header {
   display: flex;
   justify-content: space-between;
-  color: #475569;
+  color: var(--color-text-secondary);
   font-size: 14px;
 }
 
 .project-card__progress-track {
-  height: 8px;
+  height: var(--space-2);
   overflow: hidden;
   border-radius: 999px;
-  background-color: #e2e8f0;
+  background-color: var(--color-border);
 }
 
 .project-card__progress-value {
   height: 100%;
   border-radius: inherit;
-  background-color: #2563eb;
+  background-color: var(--color-primary);
 }

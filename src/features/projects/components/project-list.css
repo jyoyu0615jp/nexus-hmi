@@ -1,6 +1,19 @@
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 18px;
+.project-list-empty {
   margin-top: 24px;
+  padding: 40px 24px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+  text-align: center;
+  background-color: #f8fafc;
+}
+
+.project-list-empty h2 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.project-list-empty p {
+  margin: 0;
+  color: #64748b;
 }
