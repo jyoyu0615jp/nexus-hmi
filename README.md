@@ -1,3 +1,10 @@
+## Live Demo
+
+- Live Demo: https://nexus-hmi.vercel.app/
+- GitHub Repository: https://github.com/jyoyu0615jp/nexus-hmi
+
+The application is deployed on Vercel and can be accessed directly from the link above.
+
 # NEXUS // HMI
 
 An automotive HMI project operations dashboard built with React and TypeScript.
