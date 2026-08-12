@@ -1,3 +1,11 @@
+import { Link } from 'react-router'
+
+import StatusBadge from '../../../components/common/StatusBadge'
+import ProgressBar from '../../../components/common/ProgressBar'
+
+import { clients } from '../../clients/data/clients'
+import { vehicleModels } from '../../vehicles/data/vehicleModels'
+
 import type { HmiProject } from '../types/project'
 
 import './project-card.css'
@@ -6,53 +14,98 @@ interface ProjectCardProps {
   project: HmiProject
 }
 
-function ProjectCard({ project }: ProjectCardProps) {
+function ProjectCard({
+  project,
+}: ProjectCardProps) {
+  const client = clients.find(
+    (client) =>
+      client.id === project.clientId,
+  )
+
+  const vehicleModel =
+    vehicleModels.find(
+      (vehicleModel) =>
+        vehicleModel.id ===
+        project.vehicleModelId,
+    )
+
   return (
-    <article className="project-card">
-      <div className="project-card__header">
-        <div>
-          <p className="project-card__platform">{project.platform}</p>
-          <h2 className="project-card__name">{project.name}</h2>
-        </div>
+    <Link
+      className="project-card-link"
+      to={`/projects/${project.id}`}
+    >
+      <article className="project-card">
+        <div className="project-card__header">
+          <div>
+            <p className="project-card__platform">
+              {project.platform}
+            </p>
 
-        <span
-          className={`project-card__status project-card__status--${project.status
-            .toLowerCase()
-            .replace(' ', '-')}`}
-        >
-          {project.status}
-        </span>
-      </div>
+            <h2 className="project-card__name">
+              {project.name}
+            </h2>
+          </div>
 
-      <dl className="project-card__details">
-        <div className="project-card__detail">
-          <dt>Client</dt>
-          <dd>{project.client}</dd>
-        </div>
-
-        <div className="project-card__detail">
-          <dt>Market</dt>
-          <dd>{project.market}</dd>
-        </div>
-      </dl>
-
-      <div>
-        <div className="project-card__progress-header">
-          <span>Progress</span>
-          <strong>{project.progress}%</strong>
-        </div>
-
-        <div
-          className="project-card__progress-track"
-          aria-label={`Project progress: ${project.progress}%`}
-        >
-          <div
-            className="project-card__progress-value"
-            style={{ width: `${project.progress}%` }}
+          <StatusBadge
+            status={project.status}
           />
         </div>
-      </div>
-    </article>
+
+        <dl className="project-card__details">
+          <div className="project-card__detail">
+            <dt>
+              クライアント
+            </dt>
+
+            <dd>
+              {client?.name ??
+                'クライアント不明'}
+            </dd>
+          </div>
+
+          <div className="project-card__detail">
+            <dt>
+              車両
+            </dt>
+
+            <dd>
+              {vehicleModel?.code ??
+                '車両情報なし'}
+            </dd>
+          </div>
+
+          <div className="project-card__detail">
+            <dt>
+              市場
+            </dt>
+
+            <dd>
+              {project.market}
+            </dd>
+          </div>
+
+          <div className="project-card__detail">
+            <dt>
+              納期
+            </dt>
+
+            <dd>
+              {project.dueDate}
+            </dd>
+          </div>
+        </dl>
+
+        <div>
+          <h3 className="project-card__progress-title">
+            進捗
+          </h3>
+
+          <ProgressBar
+            value={project.progress}
+          />
+        </div>
+      </article>
+    </Link>
   )
 }
 

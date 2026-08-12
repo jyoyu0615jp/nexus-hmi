@@ -1,0 +1,104 @@
+.filter-toolbar {
+  display: grid;
+  grid-template-columns:
+    minmax(260px, 1fr)
+    minmax(180px, 240px)
+    minmax(180px, 240px)
+    auto;
+  gap: var(--space-4);
+  align-items: end;
+
+  width: 100%;
+  min-width: 0;
+  padding: var(--space-5);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+.filter-toolbar__clear {
+  min-height: 44px;
+  padding: 0 var(--space-4);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  color: var(--color-text-secondary);
+  font: inherit;
+  font-weight: 700;
+
+  background-color: var(--color-surface);
+  cursor: pointer;
+
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.filter-toolbar__clear:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-color: var(--color-background);
+}
+
+.filter-toolbar__clear:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+
+.filter-toolbar__field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.filter-toolbar__label {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.filter-toolbar__input-wrapper {
+  position: relative;
+}
+
+.filter-toolbar__icon {
+  position: absolute;
+  top: 50%;
+  left: var(--space-3);
+
+  color: var(--color-text-secondary);
+  pointer-events: none;
+
+  transform: translateY(-50%);
+}
+
+.filter-toolbar__input,
+.filter-toolbar__select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 var(--space-4);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  color: var(--color-text-primary);
+  font: inherit;
+
+  background-color: var(--color-background);
+}
+
+.filter-toolbar__input {
+  padding-left: calc(var(--space-8) + var(--space-1));
+}
+
+.filter-toolbar__input:focus,
+.filter-toolbar__select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  background-color: var(--color-surface);
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 14%);
+}

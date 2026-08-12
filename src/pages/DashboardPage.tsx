@@ -5,10 +5,13 @@ function DashboardPage() {
   return (
     <div className="page">
       <header className="page__header">
-        <h1 className="page__title">Dashboard</h1>
+        <h1 className="page__title">
+          ダッシュボード
+        </h1>
 
         <p className="page__description">
-          Monitor current HMI project activity and delivery progress.
+          HMIプロジェクトの進捗状況と
+          デリバリー状況を確認します。
         </p>
       </header>
 

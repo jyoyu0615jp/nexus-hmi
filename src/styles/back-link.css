@@ -1,0 +1,29 @@
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+
+  width: fit-content;
+  margin-bottom: var(--space-5);
+
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: color 180ms ease;
+}
+
+.back-link:hover {
+  color: var(--color-primary);
+}
+
+.back-link:focus-visible {
+  border-radius: var(--radius-sm);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.back-link:hover span:first-child {
+  transform: translateX(-4px);
+}

@@ -1,0 +1,171 @@
+.empty-state {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-2);
+
+  width: 100%;
+
+  padding:
+    var(--space-8)
+    var(--space-6);
+
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background-color: var(--color-surface);
+
+  text-align: center;
+}
+
+
+/* =========================
+   Icon
+   ========================= */
+
+.empty-state__icon {
+  display: grid;
+  place-items: center;
+
+  width: 54px;
+  height: 54px;
+
+  margin-bottom: var(--space-2);
+
+  border-radius: 16px;
+
+  color: var(--color-primary);
+
+  background-color: var(--color-background);
+}
+
+
+/* =========================
+   Text
+   ========================= */
+
+.empty-state__title {
+  margin: 0;
+
+  color: var(--color-text-primary);
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.empty-state__description {
+  max-width: 420px;
+
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   Action
+   Works for both:
+   <button> and <Link>
+   ========================= */
+
+.empty-state__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 40px;
+
+  margin-top: var(--space-3);
+
+  padding:
+    0
+    var(--space-4);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  color: var(--color-primary);
+
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+
+  background-color: var(--color-background);
+
+  cursor: pointer;
+
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.empty-state__action:hover {
+  transform: translateY(-1px);
+
+  border-color: var(--color-primary);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.empty-state__action:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+
+/* =========================
+   Dark Mode
+   ========================= */
+
+[data-theme='dark']
+.empty-state {
+  background-color: var(--color-surface);
+}
+
+[data-theme='dark']
+.empty-state__icon,
+[data-theme='dark']
+.empty-state__action {
+  background-color: var(--color-background);
+}
+
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 640px) {
+  .empty-state {
+    padding:
+      var(--space-6)
+      var(--space-4);
+  }
+
+  .empty-state__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .empty-state__title {
+    font-size: 16px;
+  }
+
+  .empty-state__description {
+    max-width: 320px;
+
+    font-size: 12px;
+  }
+
+  .empty-state__action {
+    width: 100%;
+
+    min-height: 42px;
+  }
+}

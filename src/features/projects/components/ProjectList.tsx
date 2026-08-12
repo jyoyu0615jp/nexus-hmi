@@ -1,3 +1,9 @@
+import {
+  FolderSearch,
+} from 'lucide-react'
+
+import EmptyState from '../../../components/common/EmptyState'
+
 import type { HmiProject } from '../types/project'
 
 import ProjectCard from './ProjectCard'
@@ -8,25 +14,23 @@ interface ProjectListProps {
   projects: HmiProject[]
 }
 
-function ProjectList({ projects }: ProjectListProps) {
+function ProjectList({
+  projects,
+}: ProjectListProps) {
   if (projects.length === 0) {
     return (
-      <section
-        className="project-list-empty"
-        aria-live="polite"
-      >
-        <h2>No projects found</h2>
-        <p>
-          Try changing the search keyword or project status.
-        </p>
-      </section>
+      <EmptyState
+        icon={FolderSearch}
+        title="該当するプロジェクトがありません"
+        description="検索条件またはフィルターを変更して、もう一度お試しください。"
+      />
     )
   }
 
   return (
     <section
       className="project-list"
-      aria-label="HMI project list"
+      aria-label="HMIプロジェクト一覧"
     >
       {projects.map((project) => (
         <ProjectCard

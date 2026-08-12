@@ -1,0 +1,140 @@
+.document-vehicle-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(280px, 1fr)
+    );
+
+  gap: var(--space-4);
+}
+
+.document-vehicle-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+
+  padding: var(--space-5);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  color: inherit;
+  text-decoration: none;
+
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+
+  cursor: pointer;
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.document-vehicle-card:hover {
+  transform: translateY(-2px);
+
+  border-color: var(--color-primary);
+
+  box-shadow: var(--shadow-md);
+}
+
+.document-vehicle-card:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.document-vehicle-card__icon {
+  display: grid;
+  flex: 0 0 48px;
+  place-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: var(--radius-md);
+
+  color: var(--color-primary);
+
+  background-color: var(--color-background);
+}
+
+.document-vehicle-card__content {
+  min-width: 0;
+  flex: 1;
+}
+
+.document-vehicle-card__eyebrow {
+  margin: 0 0 var(--space-1);
+
+  color: var(--color-primary);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.document-vehicle-card h2 {
+  margin: 0;
+
+  color: var(--color-text-primary);
+
+  font-size: 19px;
+}
+
+.document-vehicle-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+
+  margin-top: var(--space-2);
+
+  color: var(--color-text-secondary);
+
+  font-size: 12px;
+}
+
+.document-vehicle-card__meta span + span::before {
+  margin-right: var(--space-2);
+
+  content: '•';
+}
+
+.document-vehicle-card__documents {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+
+  margin-top: var(--space-4);
+
+  color: var(--color-text-secondary);
+
+  font-size: 12px;
+}
+
+.document-vehicle-card__arrow {
+  flex-shrink: 0;
+
+  margin-top: var(--space-2);
+
+  color: var(--color-text-secondary);
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.document-vehicle-card:hover
+.document-vehicle-card__arrow {
+  color: var(--color-primary);
+
+  transform: translateX(3px);
+}
+
+@media (max-width: 640px) {
+  .document-vehicle-grid {
+    grid-template-columns: 1fr;
+  }
+}

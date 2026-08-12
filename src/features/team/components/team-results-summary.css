@@ -1,0 +1,12 @@
+.team-results-summary {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.team-results-summary p {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+}

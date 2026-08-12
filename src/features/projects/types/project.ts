@@ -3,7 +3,7 @@ export type HmiPlatform =
   | 'Meter'
   | 'HVAC'
   | 'ADAS'
-  | 'Mobile App'
+  | '3D Model'
 
 export type ProjectStatus =
   | 'Planning'
@@ -19,9 +19,13 @@ export type TargetMarket =
 export interface HmiProject {
   id: number
   name: string
-  client: string
+  clientId: number
+  vehicleModelId: number
   platform: HmiPlatform
   market: TargetMarket
   status: ProjectStatus
   progress: number
+  startDate: string
+  dueDate: string
+  description: string
 }

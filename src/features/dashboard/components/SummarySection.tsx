@@ -2,6 +2,7 @@ import SummaryCard from './SummaryCard'
 
 import { projects } from '../../projects/data/projects'
 import { getProjectSummary } from '../utils/projectSummary'
+
 import './summary-section.css'
 
 function SummarySection() {
@@ -10,22 +11,22 @@ function SummarySection() {
   return (
     <section className="summary-section">
       <SummaryCard
-        title="Total Projects"
+        title="総プロジェクト数"
         value={summary.total}
       />
 
       <SummaryCard
-        title="Active Projects"
+        title="進行中プロジェクト"
         value={summary.active}
       />
 
       <SummaryCard
-        title="Completed"
+        title="完了プロジェクト"
         value={summary.completed}
       />
 
       <SummaryCard
-        title="Average Progress"
+        title="平均進捗率"
         value={`${summary.averageProgress}%`}
       />
     </section>

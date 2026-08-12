@@ -1,0 +1,228 @@
+.project-toolbar {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(180px, 240px) auto;
+  gap: var(--space-4);
+  align-items: end;
+
+  padding: var(--space-5);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.project-toolbar__field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.project-toolbar__label {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.project-toolbar__input-wrapper {
+  position: relative;
+}
+
+.project-toolbar__search-icon {
+  position: absolute;
+  top: 50%;
+  left: var(--space-3);
+
+  color: var(--color-text-secondary);
+  pointer-events: none;
+
+  transform: translateY(-50%);
+}
+
+.project-toolbar__input,
+.project-toolbar__select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 var(--space-4);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  color: var(--color-text-primary);
+  font: inherit;
+
+  background-color: var(--color-background);
+
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.project-toolbar__input {
+  padding-left: calc(var(--space-8) + var(--space-1));
+}
+
+.project-toolbar__input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.project-toolbar__input:hover,
+.project-toolbar__select:hover {
+  border-color: var(--color-primary);
+}
+
+.project-toolbar__input:focus,
+.project-toolbar__select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  background-color: var(--color-surface);
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 14%);
+}
+
+.project-toolbar__clear {
+  min-height: 44px;
+  padding: 0 var(--space-4);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  color: var(--color-text-secondary);
+  font-weight: 700;
+
+  background-color: var(--color-surface);
+  cursor: pointer;
+
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.project-toolbar__clear:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-color: var(--color-background);
+}
+
+/* ========================================
+   Projects Page Header
+======================================== */
+
+.projects-page__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+
+/* ========================================
+   Create Project Button
+======================================== */
+
+.projects-create-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 8px;
+
+  min-height: 44px;
+  padding: 10px 18px;
+
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--color-primary) 65%,
+      transparent
+    );
+
+  border-radius: var(--radius-md);
+
+  background-color: var(--color-primary);
+
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 6px 18px
+    rgb(37 99 235 / 18%);
+
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+
+.projects-create-button:hover {
+  transform: translateY(-1px);
+
+  background-color:
+    color-mix(
+      in srgb,
+      var(--color-primary) 88%,
+      white
+    );
+
+  box-shadow:
+    0 8px 22px
+    rgb(37 99 235 / 26%);
+
+  text-decoration: none;
+}
+
+
+.projects-create-button:active {
+  transform: translateY(0);
+}
+
+
+.projects-create-button:focus-visible {
+  outline: 3px solid
+    color-mix(
+      in srgb,
+      var(--color-primary) 30%,
+      transparent
+    );
+
+  outline-offset: 3px;
+}
+
+
+.projects-create-button__icon {
+  display: grid;
+  place-items: center;
+
+  width: 20px;
+  height: 20px;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 640px) {
+  .projects-page__header {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+
+  .projects-create-button {
+    width: 100%;
+    min-height: 46px;
+
+    padding: 12px 16px;
+  }
+}

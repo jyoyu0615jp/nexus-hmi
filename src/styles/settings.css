@@ -1,0 +1,152 @@
+.settings-layout {
+  display: grid;
+  gap: var(--space-5);
+
+  max-width: 960px;
+}
+
+.settings-section {
+  overflow: hidden;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background-color: var(--color-surface);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.settings-section__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+
+  padding: var(--space-5);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.settings-section__icon {
+  display: grid;
+  flex: 0 0 42px;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: var(--radius-md);
+
+  color: var(--color-primary);
+
+  background-color: var(--color-background);
+}
+
+.settings-section__header h2 {
+  margin: 0;
+
+  color: var(--color-text-primary);
+
+  font-size: 17px;
+}
+
+.settings-section__header p {
+  margin: var(--space-1) 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.settings-row,
+.settings-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+
+  padding: var(--space-4) var(--space-5);
+}
+
+.settings-row + .settings-row,
+.settings-toggle-row + .settings-toggle-row {
+  border-top: 1px solid var(--color-border);
+}
+
+.settings-row strong,
+.settings-toggle-row strong {
+  color: var(--color-text-primary);
+
+  font-size: 13px;
+}
+
+.settings-row p,
+.settings-toggle-row p {
+  margin: var(--space-1) 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.settings-row select {
+  min-width: 150px;
+  height: 38px;
+
+  padding: 0 var(--space-3);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  color: var(--color-text-primary);
+
+  font: inherit;
+  font-size: 12px;
+
+  background-color: var(--color-background);
+
+  cursor: pointer;
+}
+
+.settings-row select:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.settings-toggle-row {
+  cursor: pointer;
+}
+
+.settings-toggle-row input {
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 22px;
+
+  accent-color: var(--color-primary);
+
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .settings-layout {
+    max-width: none;
+  }
+
+  .settings-section__header,
+  .settings-row,
+  .settings-toggle-row {
+    padding: var(--space-4);
+  }
+
+  .settings-row,
+  .settings-toggle-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .settings-row select {
+    width: 100%;
+  }
+}

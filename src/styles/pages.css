@@ -3,6 +3,16 @@
   gap: var(--space-6);
 }
 
+.page__eyebrow {
+  margin: 0;
+
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .page__header {
   display: grid;
   gap: var(--space-2);
